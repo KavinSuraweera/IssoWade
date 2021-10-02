@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,9 @@
 		0B3EEBA22708B01E0054EE77 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3EEBA12708B01E0054EE77 /* NewConversationViewController.swift */; };
 		0B3EEBA42708B0390054EE77 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3EEBA32708B0390054EE77 /* ProfileViewController.swift */; };
 		0B3EEBA92708B8430054EE77 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3EEBA82708B8430054EE77 /* Extensions.swift */; };
+		0B5EEE90270903E300CFAB40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B5EEE8F270903E300CFAB40 /* GoogleService-Info.plist */; };
+		0B5EEE92270911C000CFAB40 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5EEE91270911C000CFAB40 /* DatabaseManager.swift */; };
+		48BC2A37CADD23B8B78BB323 /* Pods_IssoWade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD7F422A25ACFDF093EA058 /* Pods_IssoWade.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,11 @@
 		0B3EEBA12708B01E0054EE77 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		0B3EEBA32708B0390054EE77 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0B3EEBA82708B8430054EE77 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0B5EEE8F270903E300CFAB40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0B5EEE91270911C000CFAB40 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		5AD7F422A25ACFDF093EA058 /* Pods_IssoWade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IssoWade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D6C27E3CCCD3F4EAAC7BF6 /* Pods-IssoWade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssoWade.release.xcconfig"; path = "Target Support Files/Pods-IssoWade/Pods-IssoWade.release.xcconfig"; sourceTree = "<group>"; };
+		FECA53E96836F734525FF653 /* Pods-IssoWade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssoWade.debug.xcconfig"; path = "Target Support Files/Pods-IssoWade/Pods-IssoWade.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48BC2A37CADD23B8B78BB323 /* Pods_IssoWade.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +65,8 @@
 			children = (
 				0B3EEB7D2708A85C0054EE77 /* IssoWade */,
 				0B3EEB7C2708A85C0054EE77 /* Products */,
+				6CF245721DE0F7C73D0A36F1 /* Pods */,
+				F2FE23A8F132E77450D3F18A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +81,7 @@
 		0B3EEB7D2708A85C0054EE77 /* IssoWade */ = {
 			isa = PBXGroup;
 			children = (
+				0B5EEE8F270903E300CFAB40 /* GoogleService-Info.plist */,
 				0B3EEB962708AA8A0054EE77 /* Resources */,
 				0B3EEB952708AA7C0054EE77 /* ViewModels */,
 				0B3EEB942708AA760054EE77 /* Models */,
@@ -109,6 +121,7 @@
 				0B3EEB7E2708A85C0054EE77 /* AppDelegate.swift */,
 				0B3EEB802708A85C0054EE77 /* SceneDelegate.swift */,
 				0B3EEBA82708B8430054EE77 /* Extensions.swift */,
+				0B5EEE91270911C000CFAB40 /* DatabaseManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -144,6 +157,23 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		6CF245721DE0F7C73D0A36F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FECA53E96836F734525FF653 /* Pods-IssoWade.debug.xcconfig */,
+				94D6C27E3CCCD3F4EAAC7BF6 /* Pods-IssoWade.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F2FE23A8F132E77450D3F18A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AD7F422A25ACFDF093EA058 /* Pods_IssoWade.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B3EEB8F2708A85E0054EE77 /* Build configuration list for PBXNativeTarget "IssoWade" */;
 			buildPhases = (
+				91D75522F978ACDE4AD04672 /* [CP] Check Pods Manifest.lock */,
 				0B3EEB772708A85C0054EE77 /* Sources */,
 				0B3EEB782708A85C0054EE77 /* Frameworks */,
 				0B3EEB792708A85C0054EE77 /* Resources */,
+				36BF65C6A5293D762252A331 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B3EEB8B2708A85E0054EE77 /* LaunchScreen.storyboard in Resources */,
+				0B5EEE90270903E300CFAB40 /* GoogleService-Info.plist in Resources */,
 				0B3EEB882708A85E0054EE77 /* Assets.xcassets in Resources */,
 				0B3EEB862708A85C0054EE77 /* Main.storyboard in Resources */,
 			);
@@ -209,12 +242,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36BF65C6A5293D762252A331 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IssoWade/Pods-IssoWade-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IssoWade/Pods-IssoWade-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IssoWade/Pods-IssoWade-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91D75522F978ACDE4AD04672 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IssoWade-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B3EEB772708A85C0054EE77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0B3EEB9A2708AFB70054EE77 /* LoginViewController.swift in Sources */,
+				0B5EEE92270911C000CFAB40 /* DatabaseManager.swift in Sources */,
 				0B3EEB9C2708AFC80054EE77 /* RegisterViewController.swift in Sources */,
 				0B3EEBA22708B01E0054EE77 /* NewConversationViewController.swift in Sources */,
 				0B3EEB832708A85C0054EE77 /* ConversationsViewController.swift in Sources */,
@@ -367,6 +443,7 @@
 		};
 		0B3EEB902708A85E0054EE77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FECA53E96836F734525FF653 /* Pods-IssoWade.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -389,6 +466,7 @@
 		};
 		0B3EEB912708A85E0054EE77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94D6C27E3CCCD3F4EAAC7BF6 /* Pods-IssoWade.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

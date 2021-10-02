@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -17,7 +18,7 @@ class RegisterViewController: UIViewController {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person")
+        imageView.image = UIImage(systemName: "person.circle")
         imageView.tintColor = .gray
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFit
@@ -200,13 +201,41 @@ class RegisterViewController: UIViewController {
             return
         }
         
+        //Firebase create user account
+        DatabaseManager.shared.userExists(with: email, completion: { [weak self] exists in
+            guard let strongSelf = self else {
+                return
+            }
+            guard !exists else {
+                //user already exists
+                strongSelf.alertUserloginError(message: "Look slike a user account for that email address already exists")
+                return
+            }
+            
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { authResult, error in
+               guard authResult != nil, error == nil else {
+                    print("Error Creating user")
+                    return
+                }
+                
+                DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstname,
+                                                                    lastName: lastname,
+                                                                    emailAddress: email))
+                
+                strongSelf.navigationController?.dismiss(animated: true, completion: nil)
+            })
+        })
+        
+      
+        
     }
     
-    //Firebase Login
     
-    func alertUserloginError() {
+   
+    
+    func alertUserloginError(message: String =  "Please enter all information to create a new account.") {
         let alert = UIAlertController(title: "Woops",
-                                      message: "Please enter all information to create a new account.",
+                                      message: message,
                                       preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Dismiss",
